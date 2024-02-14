@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+
+nav{
+    box-shadow: 0 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    background: rgb(0,157,176);
+    background: linear-gradient(90deg, rgba(0,157,176,0.8) 0%, rgba(79,217,69,0.8) 100%);
+    
+}
+/*
+nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+    font-size: 18px;
+    
+}
+
+.nav-links:hover,
+.nav-links.active{
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    
+}
+
+.nav-links{
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    color:black;
+}
+*/
