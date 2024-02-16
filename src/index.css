@@ -17,6 +17,6 @@
 body{
     font-family:'Poppins';
     animation: fadeIn 1.5s ease forwards;
+    margin: 0;
 }
-
 

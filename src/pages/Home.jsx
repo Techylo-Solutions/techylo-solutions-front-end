@@ -8,7 +8,8 @@ const Home = () => {
                 <div className="title-container">
                     <h1 className='text-8xl pl-40 pt-44'>
                         Techylo
-                        <br></br>
+                    </h1>
+                    <h1 className='text-8xl pl-40 pt-7'> 
                         Solutions
                     </h1>
                 </div>
