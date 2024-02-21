@@ -1,5 +1,6 @@
 import {useForm} from 'react-hook-form'
 
+
 const CareerForm = () => {
 
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -18,8 +19,9 @@ const CareerForm = () => {
             {errors?.fname && <p className='text-red-600'>{errors.fname.message}</p>}
             <input {...register('lname', {required: 'Please enter your last name'})} className="border border-black" type="text" placeholder="Last Name *" />
             {errors?.fname && <p className='text-red-600'>{errors.lname.message}</p>}
-            <input {...register('email', {required: 'Please enter your email address'})} className="border border-black" type="text" placeholder="Email Address *" />
-            {errors?.fname && <p className='text-red-600'>{errors.email.message}</p>}
+            <input {...register('email', {required: 'Please enter your email address', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})} className="border border-black" type="text" placeholder="Email Address *" />
+            {errors?.email?.type === 'required' && <p className='text-red-600'>{errors.email.message}</p>}
+            {errors?.email?.type === 'pattern' && <p className='text-red-600'>Invalid email address</p>}
             <input type="submit" />
         </form>
     )
