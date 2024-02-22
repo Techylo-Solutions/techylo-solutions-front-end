@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Nav from "../components/Nav";
 import CareerImg from '/assets/career-poster.jpg'
 import './CareersStyles.css'
@@ -6,6 +7,15 @@ import CareerForm from '../components/CareerForm'
 import Footer from '../components/Footer'
 
 const Careers = () => {
+    const careerCards = useRef(null)
+
+    const scrollToCareerCards = (ref) => {
+        window.scrollTo({
+            top: ref.current.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
     return(
         <>
             <Nav />
@@ -19,14 +29,14 @@ const Careers = () => {
                     <h1 className="font-medium mb-4">Careers@</h1>
                 
                     <h1 className="font-medium mb-8">Techylo Solutions</h1>
-                    <button className="transition-colors duration-300 ease-in-out view-positions-button bg-black w-56 h-12 text-lg text-white rounded-lg hover:bg-bluetheme">
+                    <button onClick={() => scrollToCareerCards(careerCards)} className="transition-colors duration-300 ease-in-out view-positions-button bg-black w-56 h-12 text-lg text-white rounded-lg hover:bg-bluetheme">
                         View Open Positions
                     </button>
                 </div>
             </div>
-            <div className=" w-full
-             bg-gray-100 flex flex-col items-center">
-                <h1 className="text-3xl font-semibold text-center pt-10 mb-14">Available Positions</h1>
+            <div ref={careerCards} className=" w-full
+             bg-gray-100 flex flex-col items-center justify-center">
+                <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Available Positions</h1>
                 <Card />
             </div>
             <div className="h-screen w-full flex flex-col items-center justify-center">

@@ -13,9 +13,10 @@ const CareerCard = () => {
     }, [])
 
     return(
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center mb-32">
             {careers.map((career, index) => (
-                <div key={index} className="pl-4 ml-4 mr-10 w-1/4 shadow-[0_20px_50px_rgba(0,157,176,0.2)] rounded-3xl border h-40 text-xl bg-white mb-12">
+                <div key={index} className="pl-4 ml-4 mr-10 w-96
+                 shadow-[0_20px_50px_rgba(0,157,176,0.2)] rounded-3xl border h-40 text-xl bg-white mb-12">
                     <div className='flex mt-4 text-xl'>
                         <img src={Briefcase} className='w-6 mr-4'/>
                         <h1>{career.Job_title}</h1>
