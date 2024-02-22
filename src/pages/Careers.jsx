@@ -24,13 +24,13 @@ const Careers = () => {
                     </button>
                 </div>
             </div>
-            <div className="h-screen w-full bg-gray-100 flex flex-col items-center">
+            <div className=" w-full
+             bg-gray-100 flex flex-col items-center">
                 <h1 className="text-3xl font-semibold text-center pt-10 mb-14">Available Positions</h1>
                 <Card />
             </div>
-            <div className="flex flex-col items-center">
+            <div className="h-screen w-full flex flex-col items-center justify-center">
                 <CareerForm />
-                hi
             </div>
             <Footer />
             
