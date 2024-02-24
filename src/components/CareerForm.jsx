@@ -1,7 +1,7 @@
 import {useForm} from 'react-hook-form'
 
 
-const CareerForm = () => {
+const CareerForm = ({careers}) => {
 
     const {register, handleSubmit, formState: {errors}} = useForm();
 
@@ -19,6 +19,9 @@ const CareerForm = () => {
             <h1 className='text-3xl font-semibold mb-8'>Join us</h1>
             <select {...register('career', {required: 'Please select a position'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2" placeholder="Choose position">
                 <option value="">Select position</option>
+                {careers.map((career, index) => (
+                    <option key={index} value={career.Job_title}>{career.Job_title}</option>
+                ))}
             </select>
             {errors?.career && <p className='text-red-600'>{errors.career.message}</p>}
             <input {...register('fname', {required: 'Please enter your first name'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="First Name *" />

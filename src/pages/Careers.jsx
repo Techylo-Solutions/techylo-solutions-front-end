@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useState, useEffect } from 'react';
 import Nav from "../components/Nav";
 import CareerImg from '/assets/career-poster.jpg'
 import './CareersStyles.css'
@@ -7,7 +8,17 @@ import CareerForm from '../components/CareerForm'
 import Footer from '../components/Footer'
 
 const Careers = () => {
+
+    const [careers, setCareers] = useState([])
     const careerCards = useRef(null)
+
+    useEffect(()=> {
+        fetch('http://localhost:8080/careers')
+        .then(res => res.json())
+        .then(careers => setCareers(careers))
+        .catch(err => console.log(err))
+    }, [])
+
 
     const scrollToCareerCards = (ref) => {
         window.scrollTo({
@@ -37,10 +48,10 @@ const Careers = () => {
             <div ref={careerCards} className=" w-full
              bg-gray-100 flex flex-col items-center justify-center">
                 <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Available Positions</h1>
-                <Card />
+                <Card careers={careers} />
             </div>
             <div className="h-screen w-full flex flex-col items-center justify-center">
-                <CareerForm />
+                <CareerForm careers={careers} />
             </div>
             <Footer />
             

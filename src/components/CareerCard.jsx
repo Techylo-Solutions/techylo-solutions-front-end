@@ -1,16 +1,8 @@
-import { useState, useEffect } from 'react';
 import Briefcase from '../../public/assets/briefcase.png'
 
-const CareerCard = () => {
+const CareerCard = ({careers}) => {
     
-    const [careers, setCareers] = useState([])
-
-    useEffect(()=> {
-        fetch('http://localhost:8080/careers')
-        .then(res => res.json())
-        .then(careers => setCareers(careers))
-        .catch(err => console.log(err))
-    }, [])
+    
 
     return(
         <div className="flex flex-wrap justify-center mb-32">

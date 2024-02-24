@@ -8,6 +8,13 @@ const Footer = () => {
             <div className='flex flex-row h-52'>
                 <div>
                     <h1>COMPANY</h1>
+                    <ul>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Careers</li>
+                        <li>Blogs</li>
+                        <li>Contact Us</li>
+                    </ul>
                 </div>
 
                 <div>
