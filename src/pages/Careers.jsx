@@ -19,6 +19,7 @@ const Careers = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const hiring = careers.filter(career => career.status == 'Hiring')
 
     const scrollToCareerCards = (ref) => {
         window.scrollTo({
@@ -45,13 +46,20 @@ const Careers = () => {
                     </button>
                 </div>
             </div>
-            <div ref={careerCards} className=" w-full
-             bg-gray-100 flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Available Positions</h1>
-                <Card careers={careers} />
-            </div>
+            {hiring.length > 0 ? (
+                <div ref={careerCards} className=" w-full
+                bg-gray-100 flex flex-col items-center justify-center">
+                    <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Available Positions</h1>
+                    <Card careers={hiring} />
+                </div>
+            ) : (
+                <div ref={careerCards} className="text-center text-5xl mt-8 bg-gray-100">
+                    No vacancies available at the moment
+                </div>
+            )}
+                
             <div className="h-screen w-full flex flex-col items-center justify-center">
-                <CareerForm careers={careers} />
+                <CareerForm careers={hiring} />
             </div>
             <Footer />
             

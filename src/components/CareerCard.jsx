@@ -11,10 +11,10 @@ const CareerCard = ({careers}) => {
                  shadow-[0_20px_50px_rgba(0,157,176,0.2)] rounded-3xl border h-40 text-xl bg-white mb-12">
                     <div className='flex mt-4 text-xl'>
                         <img src={Briefcase} className='w-6 mr-4'/>
-                        <h1>{career.Job_title}</h1>
+                        <h1>{career.job_title}</h1>
                     </div>
                     <div className="mt-4 text-lg">
-                        <span className="text-blue mr-4">{career.Job_type}</span>
+                        <span className="text-blue mr-4">{career.job_type}</span>
                     </div>
                     <div className='mt-4 text-lg'>
                         <button className="w-28 h-8 bg-black text-white transition-colors duration-300 ease-in-out apply-now-button rounded-lg hover:bg-greentheme">Apply now</button>

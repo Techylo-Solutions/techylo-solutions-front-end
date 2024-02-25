@@ -20,7 +20,7 @@ const CareerForm = ({careers}) => {
             <select {...register('career', {required: 'Please select a position'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2" placeholder="Choose position">
                 <option value="">Select position</option>
                 {careers.map((career, index) => (
-                    <option key={index} value={career.Job_title}>{career.Job_title}</option>
+                    <option key={index} value={career.job_title}>{career.job_title} ({career.job_type})</option>
                 ))}
             </select>
             {errors?.career && <p className='text-red-600'>{errors.career.message}</p>}
