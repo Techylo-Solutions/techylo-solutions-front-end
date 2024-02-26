@@ -53,7 +53,7 @@ const Careers = () => {
                     <Card careers={hiring} />
                 </div>
             ) : (
-                <div ref={careerCards} className="text-center text-5xl mt-8 bg-gray-100">
+                <div ref={careerCards} className=" text-5xl mt-8 bg-gray-100 h-screen flex items-center justify-center">
                     No vacancies available at the moment
                 </div>
             )}
