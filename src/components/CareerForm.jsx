@@ -7,7 +7,8 @@ const CareerForm = ({careers}) => {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const onSubmit = async (data) => {  
+    const onSubmit = async (data) => {
+        console.log('Form Data:', data);   
         const formData = new FormData()
         formData.append('career', data.career)
         formData.append('fname', data.fname)
@@ -16,7 +17,7 @@ const CareerForm = ({careers}) => {
         formData.append('file', data.file[0])
 
         try{
-            const applicantData = await axios.post('/sendApplication', formData, {
+            const applicantData = await axios.post('http://localhost:8080/sendApplication', formData, {
                 headers:{
                     'Content-Type': 'multipart/form-data'
                 }
@@ -41,7 +42,7 @@ const CareerForm = ({careers}) => {
             <select {...register('career', {required: 'Please select a position'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2" placeholder="Choose position">
                 <option value="">Select position</option>
                 {careers.map((career, index) => (
-                    <option key={index} value={career.job_title}>{career.job_title} ({career.job_type})</option>
+                    <option key={index} value={career.job_id}>{career.job_title} ({career.job_type})</option>
                 ))}
             </select>
             {errors?.career && <p className='text-red-600'>{errors.career.message}</p>}
