@@ -1,6 +1,6 @@
 import './FooterStyles.css'
-import fb from '../../public/assets/fb-logo.png'
-import ln from '../../public/assets/ln-logo.png'
+import fb from '/assets/fb-logo.png'
+import ln from '/assets/ln-logo.png'
 
 const Footer = () => {
     return(
