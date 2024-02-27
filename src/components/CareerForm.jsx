@@ -53,12 +53,12 @@ const CareerForm = ({careers}) => {
             <input {...register('email', {required: 'Please enter your email', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Email Address *" />
             {errors?.email?.type === 'required' && <p className='text-red-600'>{errors.email.message}</p>}
             {errors?.email?.type === 'pattern' && <p className='text-red-600'>Please enter a valid email</p>}
-            <input {...register('file', {required: 'Please upload your CV'})} type='file'  accept = "application/pdf" className='mt-4' />
+            <input {...register('file', {required: 'Please upload your CV'})} type='file' className='mt-4' />
             <p>*Upload PDF only</p>
             {errors?.file && <p className='text-red-600'>{errors.file.message}</p>}
             <input type="submit" value="Apply" className='w-28 h-8 bg-black text-white transition-colors duration-300 ease-in-out apply-now-button rounded-lg hover:bg-bluetheme cursor-pointer mt-6' />
         
-            {successMessage && <p>{successMessage}</p>}
+            {successMessage && <p className='text-green-600'>{successMessage}</p>}
             {errorMessage && <p className='text-red-600 mt-4'>{errorMessage}</p>}
 
         </form>
