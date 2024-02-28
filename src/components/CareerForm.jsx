@@ -18,13 +18,19 @@ const CareerForm = ({careers}) => {
         formData.append('file', data.file[0])
 
         try{
-            const applicantData = await axios.post('http://localhost:8080/sendApplication', formData, {
+            const response = await axios.post('http://localhost:8080/sendApplication', formData, {
                 headers:{
                     'Content-Type': 'multipart/form-data'
                 }
             })
-            setSuccessMessage('Successfully submitted the application. We will get back to you.')
-            setErrorMessage('')
+            if (response.status === 200){
+                setSuccessMessage('Successfully submitted the application.')
+                setErrorMessage('')
+            }
+            else{
+                setSuccessMessage('')
+                setErrorMessage('Failed to submit the application. Try again.')
+            }
         }
 
         catch (error){
