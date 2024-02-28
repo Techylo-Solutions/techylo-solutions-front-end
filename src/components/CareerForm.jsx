@@ -63,9 +63,9 @@ const CareerForm = ({careers}) => {
             <input {...register('file', {required: 'Please upload your CV', validate: validateUploadedFile})} type='file' accept='application/pdf' className='mt-4' />
             <p>*Upload PDF only</p>
             {errors?.file && <p className='text-red-600'>{errors.file.message}</p>}
-            <input type="submit" value="Apply" className='w-28 h-8 bg-black text-white transition-colors duration-300 ease-in-out apply-now-button rounded-lg hover:bg-bluetheme cursor-pointer mt-6' />
+            <input type="submit" value="Apply" disabled={successMessage !== ''} className='w-28 h-8 bg-black text-white transition-colors duration-300 ease-in-out apply-now-button rounded-lg hover:bg-bluetheme cursor-pointer mt-6' />
         
-            {successMessage && <p className='text-green-600'>{successMessage}</p>}
+            {successMessage && <p className='text-green-600 mt-4'>{successMessage}</p>}
             {errorMessage && <p className='text-red-600 mt-4'>{errorMessage}</p>}
 
         </form>
