@@ -8,7 +8,14 @@ const CareerForm = ({careers}) => {
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     
-    
+    const onSubmit = async (data) => {
+        console.log('Form Data:', data);   
+        const formData = new FormData()
+        formData.append('career', data.career)
+        formData.append('fname', data.fname)
+        formData.append('lname', data.lname)
+        formData.append('email', data.email)
+        formData.append('file', data.file[0])
 
         try{
             const response = await axios.post('http://localhost:8080/sendApplication', formData, {
