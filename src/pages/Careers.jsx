@@ -36,7 +36,7 @@ const Careers = () => {
                     <img src={CareerImg} className="rounded-br-full career-poster w-full" alt="Techylo Solutions Career" />
                     
                 </div>
-                <div className="text-5xl w-1/2 flex flex-col justify-center">
+                <div className="text-6xl w-1/2 flex flex-col justify-center">
                 
                     <h1 className="font-medium mb-4">Careers@</h1>
                 
