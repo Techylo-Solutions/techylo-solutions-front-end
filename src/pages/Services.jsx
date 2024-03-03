@@ -2,7 +2,7 @@ import Nav from "../components/Nav";
 import { useRef } from "react";
 import Footer from "../components/Footer"
 import ServiceCard from "../components/ServiceCard";
-import ServicePoster from '../../public/assets/service-poster.jpg'
+import ServicePoster from '../../public/assets/services/service-poster.jpg'
 
 const Services = () => {
 
@@ -28,8 +28,8 @@ const Services = () => {
                     </button>
                 </div>
             </div>
-            <div ref={serviceCards} className="bg-gray-100 h-screen">
-                <h1>Our Services</h1>
+            <div ref={serviceCards} className="bg-gray-100 h-screen flex flex-col items-center justify-center">
+                <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Our Services</h1>
             </div>
             <Footer />
         </>
