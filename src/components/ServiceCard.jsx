@@ -1,7 +1,7 @@
 const ServiceCard = () => {
     return(
-        <div>
-            
+        <div className="">
+        
         </div>
     )
 }
