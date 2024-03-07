@@ -28,8 +28,8 @@ const Services = () => {
                     </button>
                 </div>
             </div>
-            <div ref={serviceCards} className="bg-gray-100 h-screen flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Our Services</h1>
+            <div ref={serviceCards} className="bg-gray-100 flex flex-col items-center justify-center pt-32">
+                <h1 className="text-3xl font-semibold text-center mb-12">Our Services</h1>
                 <ServiceCard />
             </div>
             <Footer />
