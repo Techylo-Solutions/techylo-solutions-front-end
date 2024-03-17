@@ -18,7 +18,7 @@ const CareerForm = ({careers}) => {
         formData.append('file', data.file[0])
 
         try{
-            const response = await axios.post('http://localhost:8080/sendApplication', formData, {
+            const response = await axios.post('http://localhost:8084/sendApplication', formData, {
                 headers:{
                     'Content-Type': 'multipart/form-data'
                 }

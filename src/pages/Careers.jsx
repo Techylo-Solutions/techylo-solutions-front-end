@@ -13,7 +13,7 @@ const Careers = () => {
     const careerCards = useRef(null)
 
     useEffect(()=> {
-        fetch('http://localhost:8080/careers')
+        fetch('http://localhost:8084/careers')
         .then(res => res.json())
         .then(careers => setCareers(careers))
         .catch(err => console.log(err))
