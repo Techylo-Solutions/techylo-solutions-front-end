@@ -6,6 +6,8 @@ import './CareersStyles.css'
 import Card from '../components/CareerCard'
 import CareerForm from '../components/CareerForm'
 import Footer from '../components/Footer'
+import Aos from "aos"
+import 'aos/dist/aos.css'
 
 const Careers = () => {
 
@@ -17,6 +19,13 @@ const Careers = () => {
         .then(res => res.json())
         .then(careers => setCareers(careers))
         .catch(err => console.log(err))
+    }, [])
+
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            delay: 100
+        });
     }, [])
 
     const hiring = careers.filter(career => career.job_status == 'Hiring')
@@ -31,7 +40,7 @@ const Careers = () => {
     return(
         <>
             <Nav />
-            <div className="careers-first-container flex space-x-4 w-full mt-16 relative">
+            <div className="careers-first-container flex space-x-4 w-full mt-16 relative" data-aos="fade-right">
                 <div className="w-1/2 justify-center items-center text-center">
                     <img src={CareerImg} className="rounded-br-full career-poster w-full" alt="Techylo Solutions Career" />
                     
@@ -48,13 +57,18 @@ const Careers = () => {
             </div>
             {hiring.length > 0 ? (
                 <div ref={careerCards} className=" w-full
-                bg-gray-100 flex flex-col items-center justify-center h-screen">
+                bg-gray-100 flex flex-col items-center justify-center h-screen"
+                data-aos="fade-in">
                     <h1 className="text-3xl font-semibold text-center pt-24 mb-12">Available Positions</h1>
                     <Card careers={hiring} />
                 </div>
             ) : (
-                <div ref={careerCards} className=" text-5xl mt-8 bg-gray-100 h-screen flex items-center justify-center">
-                    No vacancies available at the moment
+                <div ref={careerCards} className=" text-5xl mt-8 bg-gray-100 h-screen flex items-center justify-center"
+                data-aos="fade-in">
+                    <h1>
+                        No vacancies available at the moment
+                    </h1>
+                    
                 </div>
             )}
                 

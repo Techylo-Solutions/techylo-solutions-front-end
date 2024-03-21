@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useState,  lazy, Suspense } from 'react'
 import './App.css'
 import Home from './pages/Home'
-import About from './pages/About'
+// import About from './pages/About'
+import Skeleton from './components/Skeleton'
+import { ErrorBoundary } from 'react-error-boundary'
+const About = lazy(() => import('./pages/About'))
 import Services from './pages/Services'
 import Careers from './pages/Careers'
 import Blog from './pages/Blog'
@@ -17,7 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={
+            <Suspense fallback = {<Skeleton />}>
+              <About />
+            </Suspense>
+          }/>
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />

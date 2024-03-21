@@ -1,6 +1,7 @@
 import './FooterStyles.css'
 import fb from '/assets/fb-logo.png'
 import ln from '/assets/ln-logo.png'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return(
@@ -8,12 +9,12 @@ const Footer = () => {
             <div className='flex flex-row h-52 justify-center mt-8'>
                 <div className='pr-20'>
                     <h1 className='pb-2 font-semibold'>COMPANY</h1>
-                    <ul>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Careers</li>
-                        <li>Blogs</li>
-                        <li>Contact Us</li>
+                    <ul className='flex flex-col'>
+                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/services">Services</NavLink>
+                        <NavLink to="/careers">Careers</NavLink>
+                        <NavLink to="/blogs">Blogs</NavLink>
+                        <NavLink to="/contactus">Contact us</NavLink>
                     </ul>
                 </div>
 

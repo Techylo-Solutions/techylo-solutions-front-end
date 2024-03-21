@@ -1,13 +1,28 @@
 import serviceData from './JSON/serviceCards.json'
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const ServiceCard = () => {
+
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            delay: 100
+        });
+    }, [])
+
     return(
-        <div className="flex flex-wrap justify-center ml-20">
+        <div className="flex flex-wrap justify-center ml-20" data-aos="fade-in">
             {serviceData.map((service, index) => (
-                <div key={index} className='shadow-[0_10px_50px_rgba(0,157,176,0.2)] rounded-3xl h-80 w-80 items-center justify-center mb-10 mr-20'>
-                    <h1>{service.title}</h1>
-                    <p>{service.description}</p>
-                    <button className="transition-colors duration-300 ease-in-out w-48 h-12 text-lg rounded-lg hover:bg-bluetheme">
+                <div key={index} className='shadow-[0_10px_50px_rgba(0,157,176,0.2)] rounded-3xl h-80 w-80 items-center justify-center mb-16 mr-20'>
+                    <h1 className='font-semibold text-lg pl-8 pt-4'>{service.title}</h1>
+                    <div className='width-80 flex justify-center'>
+
+                        <img src={"assets/services/icons/" + service.image} className='w-16 mt-6' />
+                    </div>
+                    <p className='pl-8 pt-6'>{service.description}</p>
+                    <button className="pl-1 pt-14 duration-300 ease-in-out w-48 h-12 text-l hover:text-lg">
                 Find out more {'->'}
             </button>
                 </div>

@@ -1,22 +1,27 @@
 [
     {
         "title": "Web and Mobile Solutions",
+        "image": "solutions.png",
         "description": "Bridging digital experiences effortlessly"
     },
     {
         "title": "Technical Writing",
+        "image": "writing.png",
         "description": "Clear and concise communication for complex concepts"
     },
     {
         "title": "Product Documentation",
+        "image": "product.png",
         "description": "Easy-to-follow guidance for success"
     },
     {
         "title": "QA and Test Automation",
+        "image": "testing.png",  
         "description": "Elevating quality assurance through automated efficiency"
     },
     {
         "title": "Digital Marketing",
+        "image": "marketing.png",    
         "description": "Expand and boost your brand strategically"
     }
 ]
