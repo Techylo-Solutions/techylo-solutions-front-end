@@ -4,7 +4,7 @@ const ServiceContainer = () => {
     return(
         <div>
             {serviceInfo.map((service, index) => (
-                <div key={index} className={`flex ${index % 2 === 0 ? 'bg-white' : 'flex-row-reverse bg-gray-100'} w-full pt-32 h-screen`}>
+                <div key={index} id={`serviceContainer-${index}`} className={`flex ${index % 2 === 0 ? 'bg-white' : 'flex-row-reverse bg-gray-100'} w-full pt-32 h-screen`}>
                     <div className='w-1/2 flex flex-wrap pl-16'>
                         <h1 className='text-4xl font-semibold'>{service.title}</h1>
                         <p className='text-lg'>{service.description}</p>

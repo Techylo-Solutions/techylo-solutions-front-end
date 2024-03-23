@@ -14,6 +14,13 @@ const About = () => {
         .catch(err => console.log(err))
     }, [])
 
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            delay: 100
+        });
+    }, [])
+
     return(
         <>
             <Nav />
@@ -37,7 +44,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="h-screen flex justify-center items-center">
+            <div className="h-screen flex justify-center items-center" data-aos="fade-in">
                 <div className="w-2/3">
                     <h1 className="text-4xl">
                         What We Do:

@@ -52,7 +52,7 @@ const ContactForm = () => {
             <input {...register('email', {required: 'Please enter your email', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Email Address *" />
             {errors?.email?.type === 'required' && <p className='text-red-600'>{errors.email.message}</p>}
             {errors?.email?.type === 'pattern' && <p className='text-red-600'>Please enter a valid email</p>}
-            <textarea maxLength={250} {...register('message', {required: 'Please type a message'})} type='text' placeholder='Type a message (max 250 characters)' className="border border-gray-400 w-96 h-48 rounded-md pl-2 mt-4 resize-none" />
+            <textarea maxLength={250} {...register('message', {required: 'Please type a message'})} type='text' placeholder='Type a message * (max 250 characters)' className="border border-gray-400 w-96 h-48 rounded-md pl-2 mt-4 resize-none" />
             {errors?.message && <p className='text-red-600'>{errors.message.message}</p>}
             <input type="submit" value="Send message" disabled={successMessage !== ''} className='w-36 h-8 bg-black text-white transition-colors duration-300 ease-in-out apply-now-button rounded-lg hover:bg-bluetheme cursor-pointer mt-6' />
         
