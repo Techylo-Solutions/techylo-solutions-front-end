@@ -32,8 +32,12 @@ const Footer = () => {
                 <div className=''>
                     <h1 className='pb-2 font-semibold'>CONECT WITH US</h1>
                     <div className='flex flex-row'>
-                        <img src={fb} className='w-8 h-8 mr-2' />
-                        <img src={ln} className='w-8 h-8' />
+                        <a href="https://www.facebook.com/techylosolutions/" target='blank'>
+                            <img src={fb} className='w-8 h-8 mr-2' />
+                        </a>
+                        <a href='https://www.linkedin.com/company/techylo-solutions/mycompany/' target='blank'>
+                            <img src={ln} className='w-8 h-8' />
+                        </a>
                     </div>
                 </div>
             </div>
