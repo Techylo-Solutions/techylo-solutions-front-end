@@ -45,11 +45,11 @@ const ContactForm = () => {
                 className="flex flex-col"
             >
             <h1 className='text-3xl font-semibold'>Contact us</h1>
-            <input {...register('fname', {required: 'Please enter your first name'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4 focus:" type="text" placeholder="First Name *" />
+            <input maxLength={50} {...register('fname', {required: 'Please enter your first name'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4 focus:" type="text" placeholder="First Name *" />
             {errors?.fname && <p className='text-red-600'>{errors.fname.message}</p>}
-            <input {...register('lname', {required: 'Please enter your last name'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Last Name *" />
+            <input maxLength={50} {...register('lname', {required: 'Please enter your last name'})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Last Name *" />
             {errors?.fname && <p className='text-red-600'>{errors.lname.message}</p>}
-            <input {...register('email', {required: 'Please enter your email', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Email Address *" />
+            <input maxLength={320} {...register('email', {required: 'Please enter your email', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})} className="border border-gray-400 w-96 h-8 rounded-md pl-2 mt-4" type="text" placeholder="Email Address *" />
             {errors?.email?.type === 'required' && <p className='text-red-600'>{errors.email.message}</p>}
             {errors?.email?.type === 'pattern' && <p className='text-red-600'>Please enter a valid email</p>}
             <textarea maxLength={250} {...register('message', {required: 'Please type a message'})} type='text' placeholder='Type a message * (max 250 characters)' className="border border-gray-400 w-96 h-48 rounded-md pl-2 mt-4 resize-none" />

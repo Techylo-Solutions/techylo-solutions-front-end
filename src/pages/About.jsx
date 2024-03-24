@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Aos from "aos"
 import 'aos/dist/aos.css'
 import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
 
@@ -76,9 +77,11 @@ const About = () => {
                     <p className="mt-8 text-2xl">
                         Let's work together to make your business shine online!
                     </p>
-                    <button className="text-xl mt-8 duration-300 ease-in-out hover:text-2xl">
-                        Contact us now &gt;
-                    </button>
+                    <NavLink to="/contactus">
+                        <button className="text-xl mt-8 duration-300 ease-in-out hover:text-2xl">
+                            Contact us now &gt;
+                        </button>    
+                    </NavLink>
                 </div>
             </div>
             

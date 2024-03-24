@@ -1,19 +1,17 @@
-import Nav from '../components/Nav';
-import './HomeStyles.css'
+import Nav from '../components/Nav'
 const Home = () => {
     return(
         <>
             <Nav />
-            <div className="home-first-container">
-                <div className="title-container">
-                    <h1 className='text-8xl pl-40 pt-44'>
-                        Techylo
+            <div className="h-screen  flex flex-col justify-center items-center">
+                <div className="w-1/2">
+                    <h1 className='text-5xl font-lg'>Welcome to</h1>
+                    <h1 className='text-7xl font-lg mt-4'>
+                        Techylo Solutions
                     </h1>
-                    <h1 className='text-8xl pl-40 pt-7'> 
-                        Solutions
-                    </h1>
+                    <span className=''>Unlocking Possibilities: Seamless Solutions for Your Digital Success!</span>
                 </div>
-                <div className="image-container">
+                <div className="w-1/2">
                     
                 </div>
             </div>
