@@ -59,7 +59,7 @@ const ContactForm = () => {
             {successMessage && <p className='text-green-600 mt-4'>{successMessage}</p>}
             {errorMessage && <p className='text-red-600 mt-4'>{errorMessage}</p>}
 
-        </form>
+            </form>
         </div>
         
     )
