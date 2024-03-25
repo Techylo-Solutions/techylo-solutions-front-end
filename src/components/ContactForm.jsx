@@ -19,7 +19,7 @@ const ContactForm = () => {
         try{
             const response = await axios.post('http://localhost:8084/sendMessage', formData, {
                 headers:{
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'application/json'
                 }
             })
             if (response.status === 200){

@@ -13,7 +13,7 @@ const Footer = () => {
                         <NavLink to="/about" className='transition-colors duration-200 ease-in-out hover:text-white'>About</NavLink>
                         <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Services</NavLink>
                         <NavLink to="/careers" className='transition-colors duration-200 ease-in-out hover:text-white'>Careers</NavLink>
-                        <NavLink to="/blogs" className='transition-colors duration-200 ease-in-out hover:text-white'>Blogs</NavLink>
+                        <NavLink to="/blog" className='transition-colors duration-200 ease-in-out hover:text-white'>Blogs</NavLink>
                         <NavLink to="/contactus" className='transition-colors duration-200 ease-in-out hover:text-white'>Contact us</NavLink>
                     </ul>
                 </div>
