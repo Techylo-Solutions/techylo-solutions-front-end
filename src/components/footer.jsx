@@ -13,19 +13,19 @@ const Footer = () => {
                         <NavLink to="/about" className='transition-colors duration-200 ease-in-out hover:text-white'>About</NavLink>
                         <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Services</NavLink>
                         <NavLink to="/careers" className='transition-colors duration-200 ease-in-out hover:text-white'>Careers</NavLink>
-                        <NavLink to="/blog" className='transition-colors duration-200 ease-in-out hover:text-white'>Blogs</NavLink>
+                        <NavLink to="/blogs" className='transition-colors duration-200 ease-in-out hover:text-white'>Blogs</NavLink>
                         <NavLink to="/contactus" className='transition-colors duration-200 ease-in-out hover:text-white'>Contact us</NavLink>
                     </ul>
                 </div>
 
                 <div className='pr-20'>
                     <h1 className='pb-2 font-semibold'>SERVICES</h1>
-                    <ul>
-                        <li className='hover:text-white'>Web and Mobile Solutions</li>
-                        <li>Technical Writing</li>
-                        <li>Product Documentation</li>
-                        <li>QA and Test Automation</li>
-                        <li>Digital Marketing</li>
+                    <ul className='flex flex-col'>
+                        <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Web and Mobile Solutions</NavLink>
+                        <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Technical Writing</NavLink>
+                        <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Product Documentation</NavLink>
+                        <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>QA and Test Automation</NavLink>
+                        <NavLink to="/services" className='transition-colors duration-200 ease-in-out hover:text-white'>Digital Marketing</NavLink>
                     </ul>
                 </div>
                 

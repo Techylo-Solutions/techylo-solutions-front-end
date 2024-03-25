@@ -21,7 +21,16 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={
+            <ErrorBoundary
+              FallbackComponent={ErrorFallback}
+              onReset={() => navigate('/')}
+            >
+              <Suspense fallback = {<Skeleton />}>
+                <Home />
+              </Suspense>
+            </ErrorBoundary>
+          }/>
           <Route path="/about" element={
             <ErrorBoundary
               FallbackComponent={ErrorFallback}
