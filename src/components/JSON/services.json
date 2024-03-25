@@ -1,27 +1,32 @@
 [
     {
         "title": "Web and Mobile Solutions",
-        "image": "solutions.jpg",
-        "description": "Techylo specializes in developing websites and mobile applications that are user-friendly and have responsive designs, ensuring they work on all devices."
+        "image": "solutions.png",
+        "description": "Techylo specializes in developing websites and mobile applications that are user-friendly and have responsive designs, ensuring they work on all devices.",
+        "animation": "animate-pulse"
     },
     {
         "title": "Technical Writing",
-        "image": "writing.jpg",
-        "description": "At Techylo, we offer comprehensive technical writing services. This includes creating technical articles, blog posts, user manuals, product reviews, course materials, quizzes, certification programs, instruction guides, process guidelines, and support content. Our aim is to simplify complex information, making it easily understandable for users."
+        "image": "writing.png",
+        "description": "At Techylo, we offer comprehensive technical writing services. This includes creating technical articles, blog posts, user manuals, product reviews, course materials, quizzes, certification programs, instruction guides, process guidelines, and support content. Our aim is to simplify complex information, making it easily understandable for users.",
+        "animation": "animate-pulse"
     },
     {
         "title": "Product Documentation",
         "image": "product.png",
-        "description": "We produce detailed product documentation at Techylo. Our range includes new feature documents, release notes, feature improvement documents, API documentation, product architecture outlines, user guides, product manuals, and help documentation. Additionally, we provide FAQs and troubleshooting support, all designed to improve the user experience."
+        "description": "We produce detailed product documentation at Techylo. Our range includes new feature documents, release notes, feature improvement documents, API documentation, product architecture outlines, user guides, product manuals, and help documentation. Additionally, we provide FAQs and troubleshooting support, all designed to improve the user experience.",
+        "animation": "animate-pulse"
     },
     {
         "title": "QA and Test Automation",
         "image": "testing.png",  
-        "description": "Techylo offers software quality assurance and automated testing services to ensure software performance and reliability, along with thorough bug and error detection to maintain high-quality standards."
+        "description": "Techylo offers software quality assurance and automated testing services to ensure software performance and reliability, along with thorough bug and error detection to maintain high-quality standards.",
+        "animation": "animate-pulse"
     },
     {
         "title": "Digital Marketing",
         "image": "marketing.png",    
-        "description": "Our digital marketing services include search engine optimization (SEO), social media management, content marketing, and online advertising to help businesses increase their online visibility and reach their target audience effectively"
+        "description": "Our digital marketing services include search engine optimization (SEO), social media management, content marketing, and online advertising to help businesses increase their online visibility and reach their target audience effectively",
+        "animation": "animate-pulse"
     }
 ]

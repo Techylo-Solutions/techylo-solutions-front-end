@@ -32,8 +32,26 @@ function App() {
               </Suspense>
             </ErrorBoundary>
           }/>
-          <Route path="/services" element={<Services />} />
-          <Route path="/careers" element={<Careers />} />
+          <Route path="/services" element={
+            <ErrorBoundary
+              FallbackComponent={ErrorFallback}
+              onReset={() => navigate('/')}
+            >
+              <Suspense fallback = {<Skeleton />}>
+                <Services />
+              </Suspense>
+            </ErrorBoundary>
+          }/>
+          <Route path="/careers" element={
+            <ErrorBoundary
+              FallbackComponent={ErrorFallback}
+              onReset={() => navigate('/')}
+            >
+              <Suspense fallback = {<Skeleton />}>
+                <Careers />
+              </Suspense>
+            </ErrorBoundary>
+          }/>
           <Route path="/blog" element={<Blog />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>

@@ -3,6 +3,8 @@ import AboutPoster from "/assets/about/about-poster.jpg"
 import { useEffect } from "react";
 import Aos from "aos"
 import 'aos/dist/aos.css'
+import ServiceImage from '/assets/about/service.png'
+import JoinUs from '/assets/about/joinus.png'
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 
@@ -42,6 +44,9 @@ const About = () => {
                     Even though our office is in Colombo, our team works from different places 
                     because we believe in working remotely.
                     </p>
+                    <div className="flex justify-center">
+                        <img src={ServiceImage} className="w-24 mt-8 animate-spin" />
+                    </div>
                 </div>
             </div>
 
@@ -77,6 +82,9 @@ const About = () => {
                     <p className="mt-8 text-2xl">
                         Let's work together to make your business shine online!
                     </p>
+                    <div className="flex justify-center">
+                        <img src={JoinUs} className="w-32 mt-8" />
+                    </div>
                     <NavLink to="/contactus">
                         <button className="text-xl mt-8 duration-300 ease-in-out hover:text-2xl">
                             Contact us now &gt;

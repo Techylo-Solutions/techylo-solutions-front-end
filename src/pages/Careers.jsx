@@ -72,7 +72,7 @@ const Careers = () => {
                 </div>
             )}
                 
-            <div className="h-screen w-full flex flex-col items-center justify-center">
+            <div className="h-screen w-full flex flex-col items-center justify-center" data-aos="fade-in">
                 <CareerForm careers={hiring} />
             </div>
             <Footer />
